@@ -1,0 +1,10 @@
+root tests/backend
+
+macaque / {
+    policy keyless per_ip 100 5
+    policy default per_ip 1000 5 per_key 50000 1440
+    database /tmp/macaque.db
+    sync_interval 10
+    portal_api /portal_api
+}
+
